@@ -1,7 +1,7 @@
 A progressive web app with React.
 
-##Goals
+## Goals
 
--Learn about progressive web apps
--Learn more about webpack
--Learn more about package.json
+- Learn about progressive web apps
+- Learn more about webpack
+- Learn more about package.json
