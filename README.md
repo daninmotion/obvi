@@ -6,3 +6,4 @@ A progressive web app with React.
 - Learn more about webpack
 - Learn more about package.json
 - Learn more about Yarn
+- Learn more about CSS Modules with Webpack (for production & dev)
