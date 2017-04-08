@@ -5,3 +5,4 @@ A progressive web app with React.
 - Learn about progressive web apps
 - Learn more about webpack
 - Learn more about package.json
+- Learn more about Yarn
