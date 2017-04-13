@@ -1,0 +1,41 @@
+.header {
+	background: #856EC6;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	max-width: var(--site-width);
+	margin: 0 auto;
+}
+
+.title {
+	padding: 10px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.list {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.list-item {
+
+}
+
+.link {
+	color: white;
+	text-transform: uppercase;
+	margin-left: 10px;
+}
+
+.link:focus,
+.link:hover {
+	color: #283c46;
+}

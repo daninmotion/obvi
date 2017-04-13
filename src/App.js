@@ -1,11 +1,14 @@
-import React, {Component} from 'react'
+import React from 'react'
 import 'normalize.css'
-import styles from './App.css'
+// import styles from './App.css'
+import Header from './components/Header/Header'
+import Post from './components/Post/Post'
 
-class App extends Component {
-	render() {
-		return <h1 className={styles.heading}>Hello world</h1>
-	}
-}
+const App = () => (
+	<div>
+		<Header />
+		<Post />
+	</div>
+)
 
 export default App
