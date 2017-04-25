@@ -6,7 +6,7 @@ import styles from './Post.css'
 const Post = (props) => (
 	<div>
 		<h2 className={styles.title}>
-			<Link className={styles.link} to={`/post/${props.slug}`}>{props.title}</Link>
+		{props.titleLink ? <Link className={styles.link} to={`/post/${props.slug}`}>{props.title}</Link> : props.title }
 		</h2>
 		<p className={styles.content}>{props.excerpt}</p>
 	</div>
