@@ -1,10 +1,10 @@
 import React from 'react'
 import {shallow} from 'enzyme'
 import toJson from 'enzyme-to-json'
-import About from './About'
+import NotFound from './NotFound'
 
-test('About component should render as expected', () => {
-	const component = shallow(<About />)
+test('NotFound component should render as expected', () => {
+	const component = shallow(<NotFound />)
 	const tree = toJson(component)
 	expect(tree).toMatchSnapshot()
 })

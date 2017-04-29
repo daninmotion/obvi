@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component should render as expected 1`] = `
+<h1>
+  GOT EM! Sorry this was suppose to say 404 error.
+</h1>
+`;
