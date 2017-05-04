@@ -1,4 +1,6 @@
-A progressive web app with React.
+A simple blog built as a progressive web app with React.
+
+Course tought by a super talented developer [Kristian Roebuck](https://twitter.com/roebuk)
 
 ## Goals
 
