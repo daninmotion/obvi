@@ -1,6 +1,8 @@
 const {resolve} = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const webpack = require('webpack')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
 	context: resolve(__dirname, 'src'),
@@ -9,6 +11,7 @@ module.exports = {
 		vendor: ['react', 'react-dom', 'react-router']
 	},
 	output: {
+		path: resolve(__dirname, 'dist'),
 		filename: '[name].[chunkhash:6].js',
 		publicPath: '/'
 	},
@@ -23,7 +26,7 @@ module.exports = {
 				test: /\.css$/,
 				loader: ExtractTextPlugin.extract({
 					fallbackLoader: 'style-loader',
-					loader: 'css-loader?modules,localIdentName="[name]-[local]-[hash:base64:6]"'
+					loader: 'css-loader?modules,localIdentName="[name]-[local]-[hash:base64:6]", camelCase'
 				})
 			}
 		]
@@ -33,11 +36,16 @@ module.exports = {
 		hints: 'error'
 	},
 	plugins: [
+		new CleanWebpackPlugin(['dist']),
 		new HtmlWebpackPlugin({
+			filename: '200.html',
 			template: `./index.html`
 		}),
 		new ExtractTextPlugin({
-			filename: 'styles.css'
+			filename: 'styles.[chunkhash:6].css'
+		}),
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'vendor'
 		})
 	]
 }
