@@ -7,6 +7,7 @@
     "react-dom": "^15.4.2"
   },
   "scripts": {
+    "build": "webpack --config=webpack.prod.js -p",
     "start": "webpack-dev-server",
     "test": "jest"
   },
@@ -27,6 +28,8 @@
     "react-router": "4.0.0-alpha.6",
     "react-scripts": "0.9.5",
     "style-loader": "^0.16.1",
+    "uglify-js": "git://github.com/mishoo/UglifyJS2#harmony",
+    "uglifyjs-webpack-plugin": "^0.4.3",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2"
   },

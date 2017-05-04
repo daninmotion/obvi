@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component should render as expected 1`] = `
+<div>
+  <Post
+    content="One of the easiest ways to get a job in the early GitHub days was to blah."
+    excerpt="One of the easiest..."
+    slug="how-to-build-a-progressive-web-app-with-react"
+    title="How to build a progressive web app with React"
+    titleLink={true}
+  />
+</div>
+`;
+
+exports[`Home component should render as expected 2`] = `
+<div>
+  <Post
+    content="One of the easiest ways to get a job in the early GitHub days was to blah."
+    excerpt="One of the easiest..."
+    slug="how-to-build-a-progressive-web-app-with-react"
+    title="How to build a progressive web app with React"
+    titleLink={true}
+  />
+  <Post
+    content="One of the easiest ways to get a job in the early GitHub days was to blah."
+    excerpt="One of the easiest..."
+    slug="how-to-build-a-progressive-web-app-with-react"
+    title="How to build a progressive web app with React"
+    titleLink={true}
+  />
+</div>
+`;
+
+exports[`Home component should render as expected 3`] = `
+<div>
+  <p>
+    Awating posts!
+  </p>
+</div>
+`;

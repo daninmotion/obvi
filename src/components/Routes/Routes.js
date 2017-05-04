@@ -10,7 +10,7 @@ import posts from '../../../blog-posts.json'
 
 const Routes = () => (
 	<div>
-		<Match exactly pattern='/' component={Home} />
+		<Match exactly pattern='/' component={() => <Home posts={posts.posts} />} />
 		<Match exactly pattern='/about' component={About} />
 		<Match exactly pattern='/post/:slug' component={props => {
 			const post = posts.posts.filter(post => props.params.slug === post.slug)

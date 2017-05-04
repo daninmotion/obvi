@@ -12,3 +12,27 @@ exports[`Post component should render as expected 1`] = `
   />
 </div>
 `;
+
+exports[`Post component should render as expected with Link component 1`] = `
+<div>
+  <h2
+    className="title"
+  >
+    <Link
+      activeClassName=""
+      activeOnlyWhenExact={false}
+      activeStyle={Object {}}
+      className="link"
+      isActive={[Function]}
+      replace={false}
+      style={Object {}}
+      to="/post/undefined"
+    >
+      My post
+    </Link>
+  </h2>
+  <p
+    className="content"
+  />
+</div>
+`;
