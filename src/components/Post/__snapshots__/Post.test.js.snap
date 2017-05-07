@@ -19,13 +19,8 @@ exports[`Post component should render as expected with Link component 1`] = `
     className="title"
   >
     <Link
-      activeClassName=""
-      activeOnlyWhenExact={false}
-      activeStyle={Object {}}
       className="link"
-      isActive={[Function]}
       replace={false}
-      style={Object {}}
       to="/post/undefined"
     >
       My post

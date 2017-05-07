@@ -3,15 +3,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const OfflinePlugin = require('offline-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-	context: resolve(__dirname, 'src'),
+	context: resolve(__dirname, '../src'),
 	entry: {
 		app:`./index.js`,
 		vendor: ['react', 'react-dom', 'react-router']
 	},
 	output: {
-		path: resolve(__dirname, 'dist'),
+		path: resolve(__dirname, '../dist'),
 		filename: '[name].[chunkhash:6].js',
 		publicPath: '/'
 	},
@@ -36,9 +38,11 @@ module.exports = {
 		hints: 'error'
 	},
 	plugins: [
-		new CleanWebpackPlugin(['dist']),
+		new CleanWebpackPlugin(['dist'], {
+			root: resolve(__dirname, '..')
+		}),
 		new HtmlWebpackPlugin({
-			filename: '200.html',
+			filename: 'index.html',
 			template: `./index.html`
 		}),
 		new ExtractTextPlugin({
@@ -46,6 +50,16 @@ module.exports = {
 		}),
 		new webpack.optimize.CommonsChunkPlugin({
 			name: 'vendor'
-		})
+		}),
+		new CopyWebpackPlugin([{
+			from: resolve(__dirname, '../src/icons'),
+			to: resolve(__dirname, '../dist/')
+		}]),
+		new OfflinePlugin()
 	]
 }
+
+
+
+
+

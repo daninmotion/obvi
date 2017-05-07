@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Header.css'
-import {Link} from 'react-router'
+import {Link} from 'react-router-dom'
 
 const Header = () => (
 	<header className={styles.header}>
